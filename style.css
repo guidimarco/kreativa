@@ -1,0 +1,491 @@
+/* regole di reset */
+/* ------------------------------------ */
+/* ------------------------------------ */
+/* ------------------------------------ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px solid black; */
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+    font-size: 64px;
+    text-transform: uppercase;
+}
+
+h2 {
+    text-transform: uppercase;
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: -0.72px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+/* regole di normalizzazione */
+/* ------------------------------------ */
+/* ------------------------------------ */
+/* ------------------------------------ */
+.container {
+    width: 1200px;
+    margin: auto;
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.blue-button {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white;
+    padding: 22px 35px;
+    background-color: rgba(0,119,255,0.4);
+    transition: all 1s;
+}
+
+.blue-button:hover {
+    background-color: #ee2a5f;
+}
+
+.over-title {
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 10px;
+}
+
+/* main */
+/* ------------------------------------ */
+/* ------------------------------------ */
+/* ------------------------------------ */
+
+/* main */
+/* section: id child */
+/* ------------------------------------ */
+/* ------------------------------------ */
+section#child {
+    color: white;
+    text-align: center;
+    height: 110vh;
+    background-image: url("https://www.kreativa.org/wp-content/uploads/2019/07/Kreativa-Arte-Lucca.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    padding: 60px 0;
+}
+
+section#child::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.8));
+}
+
+#child .content {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 50px;
+}
+
+#child .content div {
+    width: 50%;
+    margin: auto;
+}
+
+#child .button {
+    position: relative;
+    z-index: 1;
+}
+
+#child h1 {
+    margin-bottom: 25px;
+    margin-top: 55px;
+    animation: typing-h1 10s infinite;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 10px solid white;
+    letter-spacing: 10px;
+}
+
+@keyframes typing-h1 {
+    0% {
+        width: 0%;
+    }
+    90% {
+        width: 100%;
+    }
+    100% {
+        width: 0%;
+    }
+}
+
+#child p {
+    padding: 0 300px;
+    margin-bottom: 10px;
+    line-height: 27.2px;
+}
+
+#child .button div:first-child {
+    margin-bottom: 10px;
+}
+
+#child .button {
+    position: relative;
+    z-index: 1;
+}
+
+#child .button div:first-child [class^=float] {
+    width: 50%;
+    padding: 0 10px;
+}
+
+#child .button a {
+    display: inline-block;
+}
+
+#child .button > div:last-child .blue-button {
+    position: relative;
+    z-index: 3;
+    font-size: 11px;
+    letter-spacing: 5px;
+    padding: 3px;
+}
+
+#child .bottom-shape svg {
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    transform: rotate(180deg);
+}
+
+/* main */
+/* nav */
+/* ------------------------------------ */
+/* ------------------------------------ */
+nav#school {
+    position: relative;
+    z-index: 2;
+    top: -90px;
+}
+
+#school .box{
+    width: calc(100% / 3);
+    text-align: center;
+    padding: 0 20px;
+}
+
+#school h3 {
+    color: #54595F;
+    font-size: 15px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+#school p {
+    color: #54595f;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+#school .nav-icon  {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@keyframes oscillazione {
+    0% {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    10% {
+        left: 50%;
+        transform: translateX(-40%);
+    }
+    30% {
+        left: 50%;
+        transform: translateX(-60%);
+    }
+    50% {
+        left: 50%;
+        transform: translateX(-45%);
+    }
+    70% {
+        left: 50%;
+        transform: translateX(-55%);
+    }
+    90% {
+        left: 50%;
+        transform: translateX(-47%);
+    }
+    100% {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+#school .nav-icon:hover {
+    background-color: white;
+    animation: oscillazione 1s linear 1;
+}
+
+#school .nav-icon:hover i {
+    color: #EB2C62;
+}
+
+#school .nav-icon i {
+    line-height: 100px;
+    color: #3894ff;
+}
+
+/* main */
+/* section: id courses */
+/* ------------------------------------ */
+/* ------------------------------------ */
+section#courses {
+    height: 150vh;
+    color:  white;
+    text-align: center;
+    background-image: url("https://www.kreativa.org/wp-content/uploads/2019/07/Kreativa-Pittura-Lucca.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+section#courses::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.8));
+}
+
+#courses .content {
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 200px;
+}
+
+#courses h2 {
+    font-size: 50px;
+    margin: 40px 0;
+}
+
+#courses h2.typing {
+    width: 9ch;
+    margin: auto;
+    overflow: hidden;
+    white-space: nowrap;
+    border-left: 10px solid white;
+    border-right: 10px solid white;
+    animation: typing-h2 3s infinite reverse;
+}
+
+@keyframes typing-h2 {
+    0% {
+        width: 0ch;
+    }
+    90% {
+        width: 9ch;
+    }
+    100% {
+        width: 0ch;
+    }
+}
+
+#courses .bottom-shape {
+    position: absolute;
+    left: 0;
+    right: 0;
+    transform: rotateX(180deg);
+    bottom: 0;
+}
+
+/* main */
+/* nav: class courses */
+/* ------------------------------------ */
+/* ------------------------------------ */
+nav.courses {
+    color: white;
+    background-color: black;
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 27px;
+}
+
+nav.courses .container > div {
+    width: 50%;
+    padding: 10px;
+}
+
+nav.courses a {
+    opacity: 0.7;
+}
+
+nav.courses a:hover {
+    opacity: 1;
+}
+
+nav.courses i {
+    color: red;
+    opacity: 0;
+}
+
+nav.courses a:hover i {
+    opacity: 1;
+}
+
+/* main */
+/* nav: id pittura */
+/* ------------------------------------ */
+/* ------------------------------------ */
+section#pittura {
+    min-height: 660px;
+    font-weight: 300;
+    text-align: center;
+    color: #54595f;
+    background-image: url(https://www.kreativa.org/wp-content/uploads/2019/08/PITTURA-KREATIVA-LUCCA.png);
+    background-size: auto 110%;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+#pittura h2 {
+    color: #aa00ba;
+    width: 8ch;
+    margin: auto;
+    font-size: 60px;
+    border-left: 10px solid #aa00ba;
+    border-right: 10px solid #aa00ba;
+    margin-bottom: 10px;
+    margin-top: 25px;
+}
+
+#pittura p {
+    line-height: 29px;
+}
+
+#pittura svg:first-child {
+    position: relative;
+    z-index: -1;
+}
+
+#pittura svg:nth-child(2) {
+    transform: rotate(180deg);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+#pittura .container > div {
+    width: 50%;
+}
+
+.when {
+    display: inline-block;
+    color: black;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 20px;
+    margin-top: 10px;
+    transition: transform 1s;
+}
+
+.when:hover {
+    color: white;
+    background-color: #aa00ba;
+    transform: rotate(5deg) scale(1.2);
+}
+
+/* main */
+/* nav: id theater */
+/* ------------------------------------ */
+/* ------------------------------------ */
+section#theater {
+    background-color: black;
+    position: relative;
+}
+
+#theater .container {
+    min-height: 100vh;
+    background-image: url(https://www.kreativa.org/wp-content/uploads/2019/08/TEATRO-KREATIVA-LUCCA.jpg);
+    background-size: auto 100vh;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+}
+
+#theater .container::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+#theater .container:hover {
+    animation: bg-filter 2s 1 forwards;
+}
+
+@keyframes bg-filter {
+    0% { filter: blur(0); }
+    100% { filter: blur(2px); }
+}
+
+#theater .container > div {
+    width: 75%;
+    height: 200px;
+    /* background-color: red; */
+}
+
+#theater div.inf > div {
+    width: 50%;
+    background-color: green;
+    height: 80px;
+}
+
+/* footer */
+/* ------------------------------------ */
+/* ------------------------------------ */
+/* ------------------------------------ */
+footer {
+    height: 600px;
+    background-color: blue;
+}
